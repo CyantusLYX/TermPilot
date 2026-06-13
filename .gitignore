@@ -1,0 +1,15 @@
+# Xcode user state
+*.xcuserstate
+xcuserdata/
+
+# Local Firebase / Google app config
+GoogleService-Info.plist
+LocalSecrets.xcconfig
+
+# Secrets / keys
+*.p8
+*.pem
+*.key
+*.mobileprovision
+.env
+.env.*

@@ -1,0 +1,4 @@
+GOOGLE_SIGN_IN_CLIENT_ID =
+GOOGLE_SIGN_IN_REVERSED_CLIENT_ID =
+
+#include? "LocalSecrets.xcconfig"

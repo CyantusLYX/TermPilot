@@ -7,12 +7,19 @@
 
 import SwiftUI
 import SwiftData
+import FirebaseCore
+import GoogleSignIn
+import TipKit
 
 @main
 struct TermPilotApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            VaultProfile.self,
+            HostProfile.self,
+            KeychainItemProfile.self,
+            SnippetProfile.self,
+            AppSettings.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
@@ -23,9 +30,21 @@ struct TermPilotApp: App {
         }
     }()
 
+    init() {
+        if Bundle.main.path(forResource: "GoogleService-Info", ofType: "plist") != nil {
+            FirebaseApp.configure()
+        }
+        try? Tips.configure([
+            .datastoreLocation(.applicationDefault)
+        ])
+    }
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .onOpenURL { url in
+                    GIDSignIn.sharedInstance.handle(url)
+                }
         }
         .modelContainer(sharedModelContainer)
     }

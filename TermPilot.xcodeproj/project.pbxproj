@@ -6,6 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		0BB41F70B54F481DA2E85E71 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B732105E5D544D018E0BCBDD /* FirebaseFirestore */; };
+		1A203A692FD9F00100975D51 /* SwiftTerm in Frameworks */ = {isa = PBXBuildFile; productRef = 1A203A6D2FD9F00100975D51 /* SwiftTerm */; };
+		1A203A6A2FD9F00100975D51 /* Citadel in Frameworks */ = {isa = PBXBuildFile; productRef = 1A203A6E2FD9F00100975D51 /* Citadel */; };
+		41A9DDBD0C1A481A825402F2 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D1EE1AA539C94735BE90C284 /* FirebaseAuth */; };
+		4BB532D5924346909A225F7F /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = A882FE6272B54AF5934CEC76 /* GoogleSignIn */; };
+		4CE3EC5A62F747D18A619B20 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = CFD87B5002DD4B17856D2FC7 /* FirebaseCore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		1A203A4D2FD9E50200975D51 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,11 +36,25 @@
 		1A203A3D2FD9E50000975D51 /* TermPilot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TermPilot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A203A4C2FD9E50200975D51 /* TermPilotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TermPilotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A203A562FD9E50200975D51 /* TermPilotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TermPilotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0D3A0010000000000000001 /* AppConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = TermPilot/Config/AppConfig.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		ED8B02EEDDE948CB9C2ED457 /* Exceptions for "TermPilot" folder in "TermPilot" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 1A203A3C2FD9E50000975D51 /* TermPilot */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		1A203A3F2FD9E50000975D51 /* TermPilot */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				ED8B02EEDDE948CB9C2ED457 /* Exceptions for "TermPilot" folder in "TermPilot" target */,
+			);
 			path = TermPilot;
 			sourceTree = "<group>";
 		};
@@ -52,6 +75,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A203A692FD9F00100975D51 /* SwiftTerm in Frameworks */,
+				1A203A6A2FD9F00100975D51 /* Citadel in Frameworks */,
+				4CE3EC5A62F747D18A619B20 /* FirebaseCore in Frameworks */,
+				41A9DDBD0C1A481A825402F2 /* FirebaseAuth in Frameworks */,
+				0BB41F70B54F481DA2E85E71 /* FirebaseFirestore in Frameworks */,
+				4BB532D5924346909A225F7F /* GoogleSignIn in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +141,12 @@
 			);
 			name = TermPilot;
 			packageProductDependencies = (
+				1A203A6D2FD9F00100975D51 /* SwiftTerm */,
+				1A203A6E2FD9F00100975D51 /* Citadel */,
+				CFD87B5002DD4B17856D2FC7 /* FirebaseCore */,
+				D1EE1AA539C94735BE90C284 /* FirebaseAuth */,
+				B732105E5D544D018E0BCBDD /* FirebaseFirestore */,
+				A882FE6272B54AF5934CEC76 /* GoogleSignIn */,
 			);
 			productName = TermPilot;
 			productReference = 1A203A3D2FD9E50000975D51 /* TermPilot.app */;
@@ -195,6 +230,12 @@
 			);
 			mainGroup = 1A203A342FD9E50000975D51;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				1A203A6B2FD9F00100975D51 /* XCRemoteSwiftPackageReference "SwiftTerm" */,
+				1A203A6C2FD9F00100975D51 /* XCRemoteSwiftPackageReference "Citadel" */,
+				60E8A539612749949F671CC6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				AC696454C9384112AE3A092E /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 1A203A3E2FD9E50000975D51 /* Products */;
 			projectDirPath = "";
@@ -392,19 +433,17 @@
 		};
 		1A203A612FD9E50200975D51 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0D3A0010000000000000001 /* AppConfig.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M6C68NXUAG;
+				ENABLE_DEBUG_DYLIB = NO;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = TermPilot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -424,6 +463,7 @@
 		};
 		1A203A622FD9E50200975D51 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0D3A0010000000000000001 /* AppConfig.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -431,12 +471,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M6C68NXUAG;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = TermPilot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -578,6 +614,74 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1A203A6B2FD9F00100975D51 /* XCRemoteSwiftPackageReference "SwiftTerm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/migueldeicaza/SwiftTerm";
+			requirement = {
+				kind = exactVersion;
+				version = 1.11.2;
+			};
+		};
+		1A203A6C2FD9F00100975D51 /* XCRemoteSwiftPackageReference "Citadel" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/orlandos-nl/Citadel";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		60E8A539612749949F671CC6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.14.0;
+			};
+		};
+		AC696454C9384112AE3A092E /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1A203A6D2FD9F00100975D51 /* SwiftTerm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A203A6B2FD9F00100975D51 /* XCRemoteSwiftPackageReference "SwiftTerm" */;
+			productName = SwiftTerm;
+		};
+		1A203A6E2FD9F00100975D51 /* Citadel */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A203A6C2FD9F00100975D51 /* XCRemoteSwiftPackageReference "Citadel" */;
+			productName = Citadel;
+		};
+		A882FE6272B54AF5934CEC76 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AC696454C9384112AE3A092E /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		B732105E5D544D018E0BCBDD /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 60E8A539612749949F671CC6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		CFD87B5002DD4B17856D2FC7 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 60E8A539612749949F671CC6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		D1EE1AA539C94735BE90C284 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 60E8A539612749949F671CC6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1A203A352FD9E50000975D51 /* Project object */;
 }
